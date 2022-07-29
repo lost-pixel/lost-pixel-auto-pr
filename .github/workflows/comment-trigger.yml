@@ -5,12 +5,12 @@ on:
     types: [created]
 
 jobs:
-  deploy:
+  lost-pixel-update:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@v1.1.0
         id: check
         with:
-          trigger: "@deploy"
+          trigger: "lp update baseline"
       - run: "echo Found it!"
         if: steps.check.outputs.triggered == 'true'
