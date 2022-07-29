@@ -23,5 +23,8 @@ jobs:
       - name: Serve ladle
         run: npm run serve &
 
+      - name: Debugging with tmate
+        uses: mxschmitt/action-tmate@v3.11
+
       - name: Lost Pixel
         uses: lost-pixel/lost-pixel-action@v2.5.0
