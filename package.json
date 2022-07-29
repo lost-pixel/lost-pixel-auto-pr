@@ -1,0 +1,15 @@
+{
+  "name": "lost-pixel-auto-pr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "d-ivashchuk",
+  "license": "MIT",
+  "dependencies": {
+    "@ladle/react": "^2.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "lost-pixel": "^2.5.0"
+  }
+}
