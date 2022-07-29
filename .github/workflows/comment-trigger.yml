@@ -12,5 +12,8 @@ jobs:
         id: check
         with:
           trigger: "lp update baseline"
+          reaction: rocket
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
       - run: "echo Found it!"
         if: steps.check.outputs.triggered == 'true'
