@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  lost-pixel-update:
+  lost-pixel-update-trigger:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@v1.1.0
@@ -15,5 +15,29 @@ jobs:
           reaction: rocket
         env:
           GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
-      - run: "echo Found it!"
+      - run: "Updating lost-pixel baseline"
         if: steps.check.outputs.triggered == 'true'
+  lost-pixel-update:
+    needs: lost-pixel-update-trigger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build ladle
+        run: npm run build
+
+      - name: Serve ladle
+        run: npm run serve &
+
+      - name: Lost Pixel
+        uses: lost-pixel/lost-pixel-action@v2.5.0
