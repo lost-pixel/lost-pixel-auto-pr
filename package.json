@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "d-ivashchuk",
   "license": "MIT",
+  "scripts": {
+    "serve": "npx serve build -p 61000",
+    "build": "ladle build"
+  },
   "dependencies": {
     "@ladle/react": "^2.0.2",
     "react": "^18.2.0",
