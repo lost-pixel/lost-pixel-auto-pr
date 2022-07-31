@@ -2,7 +2,6 @@ on: workflow_dispatch
 
 jobs:
   lost-pixel-update:
-    needs: lost-pixel-update-trigger
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
