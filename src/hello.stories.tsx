@@ -1,1 +1,1 @@
-export const World = () => <p>Hey</p>;
+export const World = () => <p>Hello world</p>;
