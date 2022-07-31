@@ -40,6 +40,6 @@ jobs:
       - name: Lost Pixel
         uses: lost-pixel/lost-pixel@v2.7.0
         env:
-          LOST_PIXEL_MODE: "update"
+          LOST_PIXEL_MODE: update
       - name: Debugging with tmate
         uses: mxschmitt/action-tmate@v3.11
