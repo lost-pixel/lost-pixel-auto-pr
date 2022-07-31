@@ -38,7 +38,7 @@ jobs:
         run: npm run serve &
 
       - name: Lost Pixel
-        run: lost-pixel/lost-pixel@v2.7.0
+        uses: lost-pixel/lost-pixel@v2.7.0
         env:
           LOST_PIXEL_MODE: "update"
       - name: Debugging with tmate
