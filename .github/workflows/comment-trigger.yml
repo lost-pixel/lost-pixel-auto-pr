@@ -45,3 +45,5 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
+          commit-message: [automated] update lost-pixel baselines
+          delete-branch: true
