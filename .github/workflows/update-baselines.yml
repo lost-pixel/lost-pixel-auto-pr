@@ -32,4 +32,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           commit-message: update lost-pixel baselines
           delete-branch: true
-          branch: "lost-pixel-update-${{ github.ref_name }}"
+          branch: "lost-pixel-update/${{ github.ref_name }}"
+          title: "Lost Pixel update - ${{ github.ref_name }}"
+          commit-message: "update lost-pixel baselines"
