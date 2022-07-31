@@ -1,20 +1,6 @@
-on:
-  pull_request:
-    types: [opened]
-  issue_comment:
-    types: [created]
+on: workflow_dispatch
 
 jobs:
-  lost-pixel-update-trigger:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: khan/pull-request-comment-trigger@v1.1.0
-        id: check
-        with:
-          trigger: "lp update baseline"
-          reaction: rocket
-        env:
-          GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
   lost-pixel-update:
     needs: lost-pixel-update-trigger
     runs-on: ubuntu-latest
